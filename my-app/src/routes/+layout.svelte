@@ -7,7 +7,7 @@
 </script>
 
 <Navbar />
-<Background>
+<Background class="select-none">
 	<div class="relative m-10 flex flex-col items-center">
 		{@render children()}
 	</div>

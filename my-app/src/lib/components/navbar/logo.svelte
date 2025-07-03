@@ -1,7 +1,7 @@
 <!-- 전체 감싸는거 -->
 <a
     href="/"
-    class="m-5 ml-6 flex items-center space-x-3 text-white hover:opacity-80 transition-opacity duration-200"
+    class="m-5 ml-6 flex items-center space-x-3 text-white hover:opacity-80 transition-opacity duration-200 select-none"
 >
     <!-- logo -->
     <svg

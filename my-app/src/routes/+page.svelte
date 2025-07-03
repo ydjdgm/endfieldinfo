@@ -3,4 +3,4 @@
   import * as m from '$lib/paraglide/messages';
 </script>
 
-<h2>{m.greeting()}</h2>
+<h2 class="select-none">{m.greeting()}</h2>
