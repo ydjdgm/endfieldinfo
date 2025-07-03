@@ -9,7 +9,7 @@
 	},
 	"baseLocale": "en",
 	"locales": [
-		"en", // English
-		"ko" // Korean 한국어
+		"en",
+		"ko"
 	]
 }
