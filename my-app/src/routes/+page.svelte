@@ -3,6 +3,4 @@
   import * as m from '$lib/paraglide/messages';
 </script>
 
-<h2>{m.guide_title()}</h2>
-
-<p>이곳은 메인 페이지입니다. 원하는 공략을 선택하세요.</p>
+<h2>{m.greeting()}</h2>

@@ -1,5 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"greeting": "Hello, Endfield!",
-	"guide_title": "Operator Guide"
+	"menu_home": "Home",
+	"menu_characters": "Characters",
+	"menu_weapons": "Weapons"
 }

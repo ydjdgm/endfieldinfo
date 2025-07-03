@@ -1,5 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"greeting": "안녕, 엔드필드!",
-    "guide_title": "오퍼레이터 공략"
+	"menu_home": "홈",
+	"menu_characters": "캐릭터",
+	"menu_weapons": "무기"
 }
