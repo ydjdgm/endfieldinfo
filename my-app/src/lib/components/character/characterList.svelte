@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { Character } from "$lib";
     export let characters: Character[] = [];
+    import * as m from "$lib/paraglide/messages";
 </script>
 
 <ul class="flex flex-wrap gap-3 mt-20 justify-center">
@@ -33,7 +34,7 @@
                 <h3
                     class="relative text-xl font-bold text-white mb-2 z-30 text-center"
                 >
-                    {c.name}
+                    {m[c.name]()}
                 </h3>
 
                 <!-- 커서 올릴시 -->
