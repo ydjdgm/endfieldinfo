@@ -34,7 +34,7 @@
                 <h3
                     class="relative text-xl font-bold text-white mb-2 z-30 text-center"
                 >
-                    {m[c.name]()}
+                    {(m as any)[c.name]()}
                 </h3>
 
                 <!-- 커서 올릴시 -->
@@ -43,15 +43,15 @@
                 >
                     <div class="flex space-x-2">
                         <img src={c.element.img} alt={c.element.name} />
-                        <p class="text-sm">{c.element.name}</p>
+                        <p class="text-sm">{(m as any)[c.element.name]()}</p>
                     </div>
                     <div class="flex space-x-2">
                         <img src={c.weapon_type.img} alt={c.weapon_type.name} />
-                        <p class="text-sm">{c.weapon_type.name}</p>
+                        <p class="text-sm">{(m as any)[c.weapon_type.name]()}</p>
                     </div>
                     <div class="flex space-x-2">
                         <img src={c.class.img} alt={c.class.name} />
-                        <p class="text-sm">{c.class.name}</p>
+                        <p class="text-sm">{(m as any)[c.class.name]()}</p>
                     </div>
                 </div>
             </a>

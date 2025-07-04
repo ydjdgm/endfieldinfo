@@ -1,6 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"greeting": "안녕, 엔드필드!",
+	"greeting": "환영합니다!",
 	"menu_home": "홈",
 	"menu_characters": "캐릭터",
 	"menu_weapons": "무기",
@@ -17,5 +17,20 @@
 	"Arclight": "아크라이트",
 	"Laevatain": "레바테인",
 	"Yvonne": "이본",
-	"Snowshine": "스노우샤인"
+	"Snowshine": "스노우샤인",
+	"Caster": "캐스터",
+	"Defender": "디펜더",
+	"Guard": "가드",
+	"Specialist": "스페셜리스트",
+	"Support": "서포터",
+	"Physical": "물리",
+	"Cryo": "냉기",
+	"Electric": "전기",
+	"Heat": "열기",
+	"Nature": "자연",
+	"Greatsword": "양손 무기",
+	"Guns": "권총",
+	"Orbiters": "부유포",
+	"Polearm": "긴 무기",
+	"Sword": "한손검"
 }

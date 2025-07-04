@@ -5,7 +5,7 @@
     // 현재 설정된 언어를 가져옴
     const currentLanguage = getLocale();
 
-    // 언어를 변경하는 함수입니다.
+    // 언어를 변경하는 함수
     function handleLanguageChange(lang: "ko" | "en") {
         setLocale(lang);
         // setLocale을 호출하면 ParaglideJS가 페이지를 자동으로 새로고침하거나
@@ -13,7 +13,7 @@
     }
 </script>
 
-<div class="dropdown dropdown-top">
+<div class="dropdown dropdown-top pb-2">
     <div tabindex="0" role="button" class="btn btn-ghost btn-sm">
         <Globe />
         <span class="uppercase">{currentLanguage}</span>

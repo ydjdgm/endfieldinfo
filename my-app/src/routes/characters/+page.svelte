@@ -3,6 +3,7 @@
   import CharacterList from "$lib/components/character/characterList.svelte";
   import CharacterFilter from "$lib/components/character/characterFilter.svelte";
   import type { Character } from "$lib";
+  import * as m from "$lib/paraglide/messages";
 
   let selectedRarity: number | null = null;
   let selectedElement: number | null = null;
@@ -22,7 +23,7 @@
   console.log(data.response);
 </script>
 
-<h1 class="font-bold text-4xl">캐릭터</h1>
+<h1 class="font-bold text-4xl">{m.menu_characters()}</h1>
 <CharacterFilter
   bind:selectedRarity
   bind:selectedElement

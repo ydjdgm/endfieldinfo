@@ -1,6 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"greeting": "Hello, Endfield!",
+	"greeting": "Welcome!",
 	"menu_home": "Home",
 	"menu_characters": "Characters",
 	"menu_weapons": "Weapons",
@@ -17,5 +17,20 @@
 	"Arclight": "Arclight",
 	"Laevatain": "Laevatain",
 	"Yvonne": "Yvonne",
-	"Snowshine": "Snowshine"
+	"Snowshine": "Snowshine",
+	"Caster": "Caster",
+	"Defender": "Defender",
+	"Guard": "Guard",
+	"Specialist": "Specialist",
+	"Support": "Support",
+	"Physical": "Physical",
+	"Cryo": "Cryo",
+	"Electric": "Electric",
+	"Heat": "Heat",
+	"Nature": "Nature",
+	"Greatsword": "Greatsword",
+	"Guns": "Guns",
+	"Orbiters": "Orbiters",
+	"Polearm": "Polearm",
+	"Sword": "Sword"
 }

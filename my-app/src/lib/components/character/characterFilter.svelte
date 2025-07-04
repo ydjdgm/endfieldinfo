@@ -1,6 +1,8 @@
 <script lang="ts">
     import { Sparkle, RotateCcw } from "@lucide/svelte";
     import type { Rarity, Class, WeaponType, Element } from "$lib";
+    import * as m from "$lib/paraglide/messages";
+
     export let rarities: Rarity[] = [];
     export let classes: Class[] = [];
     export let weapon_types: WeaponType[] = [];
@@ -42,17 +44,19 @@
         </div>
         <div class="flex gap-2 mt-10">
             {#each elements as elem}
-                <button
-                    class="btn btn-square w-17 h-13 p-2 bg-neutral hover:bg-neutral-focus border border-gray-700"
-                    class:selected={selectedElement === elem.id}
-                    class:bg-sky-500={selectedElement === elem.id}
-                    class:border-sky-700={selectedElement === elem.id}
-                    on:click={() =>
-                        (selectedElement =
-                            selectedElement === elem.id ? null : elem.id)}
-                >
-                    <img src={elem.img} alt={elem.name} class="w-6 h-6" />
-                </button>
+                <div class="tooltip" data-tip={(m as any)[elem.name]()}>
+                    <button
+                        class="btn btn-square w-17 h-13 p-2 bg-neutral hover:bg-neutral-focus border border-gray-700"
+                        class:selected={selectedElement === elem.id}
+                        class:bg-sky-500={selectedElement === elem.id}
+                        class:border-sky-700={selectedElement === elem.id}
+                        on:click={() =>
+                            (selectedElement =
+                                selectedElement === elem.id ? null : elem.id)}
+                    >
+                        <img src={elem.img} alt={elem.name} class="w-6 h-6" />
+                    </button>
+                </div>
             {/each}
         </div>
         <div class="flex gap-2 mt-10">
@@ -66,31 +70,42 @@
     <div class="flex gap-5">
         <div class="flex gap-2 mt-5">
             {#each classes as c}
-                <button
-                    class="btn btn-square w-17 h-13 p-2 bg-neutral hover:bg-neutral-focus border border-gray-700"
-                    class:selected={selectedClass === c.id}
-                    class:bg-sky-500={selectedClass === c.id}
-                    class:border-sky-700={selectedClass === c.id}
-                    on:click={() =>
-                        (selectedClass = selectedClass === c.id ? null : c.id)}
+                <div
+                    class="tooltip tooltip-bottom"
+                    data-tip={(m as any)[c.name]()}
                 >
-                    <img src={c.img} alt={c.name} class="w-6 h-6" />
-                </button>
+                    <button
+                        class="btn btn-square w-17 h-13 p-2 bg-neutral hover:bg-neutral-focus border border-gray-700"
+                        class:selected={selectedClass === c.id}
+                        class:bg-sky-500={selectedClass === c.id}
+                        class:border-sky-700={selectedClass === c.id}
+                        on:click={() =>
+                            (selectedClass =
+                                selectedClass === c.id ? null : c.id)}
+                    >
+                        <img src={c.img} alt={c.name} class="w-6 h-6" />
+                    </button>
+                </div>
             {/each}
         </div>
         <div class="flex gap-2 mt-5">
             {#each weapon_types as wt}
-                <button
-                    class="btn btn-square w-17 h-13 p-2 bg-neutral hover:bg-neutral-focus border border-gray-700"
-                    class:selected={selectedWeaponType === wt.id}
-                    class:bg-sky-500={selectedWeaponType === wt.id}
-                    class:border-sky-700={selectedWeaponType === wt.id}
-                    on:click={() =>
-                        (selectedWeaponType =
-                            selectedWeaponType === wt.id ? null : wt.id)}
+                <div
+                    class="tooltip tooltip-bottom"
+                    data-tip={(m as any)[wt.name]()}
                 >
-                    <img src={wt.img} alt={wt.name} class="w-6 h-6" />
-                </button>
+                    <button
+                        class="btn btn-square w-17 h-13 p-2 bg-neutral hover:bg-neutral-focus border border-gray-700"
+                        class:selected={selectedWeaponType === wt.id}
+                        class:bg-sky-500={selectedWeaponType === wt.id}
+                        class:border-sky-700={selectedWeaponType === wt.id}
+                        on:click={() =>
+                            (selectedWeaponType =
+                                selectedWeaponType === wt.id ? null : wt.id)}
+                    >
+                        <img src={wt.img} alt={wt.name} class="w-6 h-6" />
+                    </button>
+                </div>
             {/each}
         </div>
     </div>
