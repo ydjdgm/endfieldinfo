@@ -1,10 +1,14 @@
 import { createClient } from '@supabase/supabase-js'
 import type { PageServerLoad } from './$types'
+import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public'
+
+let _PUBLIC_SUPABASE_URL = PUBLIC_SUPABASE_URL;
+let _PUBLIC_SUPABASE_ANON_KEY = PUBLIC_SUPABASE_ANON_KEY;
 
 export const load: PageServerLoad = async ({ fetch }) => {
   const supabase = createClient(
-    'https://kartzmrpjvrdkcbmynlk.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImthcnR6bXJwanZyZGtjYm15bmxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE1NTc4MTQsImV4cCI6MjA2NzEzMzgxNH0.xuj9vVCT4wx0dXo1V0q200--D54asxDixNF0pt_5EqQ'
+    _PUBLIC_SUPABASE_URL,
+    _PUBLIC_SUPABASE_ANON_KEY
   )
 
   const { data: response, error } = await supabase.functions.invoke('get-characters')
