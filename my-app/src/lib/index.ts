@@ -10,10 +10,10 @@ export interface Character {
   name: string;
   img_type1: string;
   img_type2: string;
-  character_rarity: Rarity;
-  character_class: Class;
-  character_weapon_type: WeaponType;
-  character_element: Element;
+  rarity: Rarity;
+  class: Class;
+  weapon_type: WeaponType;
+  element: Element;
   atk: number;
   hp: number;
   def: number;
