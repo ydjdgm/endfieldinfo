@@ -13,9 +13,9 @@
                 <!-- 색 배경경 -->
                 <div
                     class="absolute top-0 left-0 w-full h-full z-0"
-                    class:bg-purple-600={c.character_rarity.id === 4}
-                    class:bg-yellow-500={c.character_rarity.id === 5}
-                    class:bg-orange-700={c.character_rarity.id === 6}
+                    class:bg-purple-600={c.character_rarity === 4}
+                    class:bg-yellow-500={c.character_rarity === 5}
+                    class:bg-orange-700={c.character_rarity === 6}
                 ></div>
                 <!-- 위에 얹는 그라데이션 -->
                 <div
