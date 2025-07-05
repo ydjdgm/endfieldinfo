@@ -20,7 +20,7 @@
 
   export let data: PageData;
 
-  console.log(data.response);
+  console.log(data);
 </script>
 
 <h1 class="font-bold text-4xl">{m.menu_characters()}</h1>
