@@ -8,10 +8,29 @@
     console.log(data);
 </script>
 
-{#if data.character}
-    <h1>{data.character.name}</h1>
-    <img src={data.character.img_type1} alt={data.character.name} />
-    <p>Class: {data.character.class.name}</p>
-    <p>Element: {data.character.element.name}</p>
-    <p>Weapon: {data.character.weapon_type.name}</p>
-{/if}
+<!-- 전체 카드 -->
+<div class="w-[70vw] flex space-x-3">
+    <!-- 왼쪽 전체 블럭 -->
+    <div class="w-[20vw] bg-amber-50">
+        <img class="w-full" src={data.character.img_type1} alt={data.character.name} />
+        <!-- <div
+            class="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-white/40 to-transparent pointer-events-none"
+        ></div> -->
+    </div>
+    <!-- 오른쪽 전체 블럭 -->
+    <div class="w-[50vw] bg-amber-100">
+        <!-- 티어 -->
+        <div class="bg-amber-900"></div>
+        <!-- 기어 -->
+        <div></div>
+        <!-- 스킬 -->
+        <div></div>
+        <!-- 무기&파티추천 -->
+        <div>
+            <!-- 무기 -->
+            <div></div>
+            <!-- 피타추천 -->
+            <div></div>
+        </div>
+    </div>
+</div>
